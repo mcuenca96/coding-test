@@ -4,14 +4,16 @@ Simple react app example for Mediasmart, bootstrapped with [Create React App](ht
 
 In the project directory, you can run:
 
-### `npm start`
+```
+npm start
+```
 
 Runs the whole app in the development mode.
 
-- Client will be running in [http://localhost:3000](http://localhost:3000).
+- Client will be running on [http://localhost:3000](http://localhost:3000). 
 - Server will be running on [http://localhost:5000](http://localhost:5000).
 
-The page will reload if you make edits.
+Both will reload if you make changes in the code.
 
 ## Learn More
 
