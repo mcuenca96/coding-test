@@ -1,4 +1,10 @@
 import React from 'react';
+import fetch from 'isomorphic-fetch';
+
+async function onClick () {
+  const data = await fetch('http://localhost:5000/api/hello');
+  alert((await data.json()).message);
+}
 
 function App() {
   return (
@@ -8,6 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <button onClick={onClick}>Click me</button>
       </header>
     </div>
   );
