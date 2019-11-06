@@ -68,12 +68,6 @@ Both will reload if you make changes in the code.
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Server Endpoint Authorization (Important!!!)
-
-The endpoint needs an authorization parameter. To obtain it you have to look at the headers, using Chrome or a terminal and `curl`:
-
-`curl -v http://work.mediasmart.io/`
-
 ## Submission
 
 Once finished, please, email us the solution with the code in a git repo:
