@@ -40,34 +40,6 @@ Profile view
 
 ![Profile view](./img/profile-view.png)
 
-## Where to begin
-If you whish you can use as a boilerplate this example app that we provide you bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Available Scripts
-
-Install dependencies with:
-
-```
-npm install
-```
-
-In the project directory, you can run:
-
-```
-npm start
-```
-
-Runs the whole app in the development mode.
-
-- Client will be running on [http://localhost:3000](http://localhost:3000).
-- Server will be running on [http://localhost:5000](http://localhost:5000).
-
-Both will reload if you make changes in the code.
-
-### Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 ## Submission
 
 Once finished, please, email us the solution with the code in a git repo:
@@ -76,7 +48,7 @@ Subject:
 "Software Engineer Assessment: <your name>"
 
 Address:
-jobs@mediasmart.io
+matrix@mediasmart.io
 
 Of course, if you have any question, don't hesitate to ask!
 
