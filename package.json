@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.14",
     "@types/react": "^17.0.38",
@@ -10,14 +11,17 @@
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "body-parser": "^1.19.0",
-    "concurrently": "^4.1.0",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-standard": "^16.0.3",
     "express": "^4.17.1",
     "isomorphic-fetch": "^3.0.0",
     "prettier": "^2.5.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^5.0.0",
     "typescript": "^4.5.5"
   },
   "scripts": {
@@ -26,7 +30,10 @@
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "mediasmart"
+    ]
   },
   "browserslist": {
     "production": [
@@ -44,7 +51,7 @@
   "devDependencies": {
     "@types/isomorphic-fetch": "^0.0.35",
     "eslint-config-mediasmart": "^1.0.5",
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.15"
   },
   "resolutions": {
     "@typescript-eslint/typescript-estree": "5.9.0"
