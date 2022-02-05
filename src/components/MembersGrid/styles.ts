@@ -8,6 +8,7 @@ const styles = {
     maxWidth: '1280px',
     margin: 'auto',
   },
+  gridItem: {},
 }
 
 export default styles
