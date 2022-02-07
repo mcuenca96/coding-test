@@ -41,6 +41,10 @@ app.get('/api/v1/members/page/:page', verifyCache, async (req, res) => {
       payload: await response.json(),
     }))
     cache.set(page, payload)
+    await fetch(payload[0].image).then(async response => {
+      console.log(response)
+    })
+    console.log(payload[0].image)
     return res.status(response.status).json(payload)
   } catch (error) {
     console.log(error)
