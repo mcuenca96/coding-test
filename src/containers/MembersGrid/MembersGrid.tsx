@@ -1,13 +1,16 @@
 import * as React from 'react'
 import fetch from 'isomorphic-fetch'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import Button from '@material-ui/core/Button'
 
 import MembersGridComponent from '../../components/MembersGrid'
+import Member from '../../containers/Member'
 
-import { type Props, type Member } from './types'
+import { type Member as Member$Type } from './types'
 
 const MembersGrid = () => {
   const [page, setCurrentPage] = React.useState<number>(1)
-  const [members, setMembers] = React.useState<Member[]>([])
+  const [members, setMembers] = React.useState<Member$Type[]>([])
   const [loading, setLoading] = React.useState<boolean>(false)
 
   React.useEffect(() => {
@@ -27,9 +30,19 @@ const MembersGrid = () => {
     <React.Fragment>
       <MembersGridComponent
         members={members}
-        loadMore={() => setCurrentPage(page + 1)}
+        Member={Member}
+        loadMore={React.useMemo(
+          () =>
+            loading ? (
+              <CircularProgress />
+            ) : (
+              <Button onClick={() => setCurrentPage(page + 1)}>
+                Load more members
+              </Button>
+            ),
+          [loading]
+        )}
       />
-      {loading && <p>THIS WILL BE A SPINNER</p>}
     </React.Fragment>
   )
 }

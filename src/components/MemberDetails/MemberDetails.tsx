@@ -1,24 +1,17 @@
 import * as React from 'react'
 import { withStyles } from '@material-ui/core'
+import Dialog from '@material-ui/core/Dialog'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
-import CardActionArea from '@material-ui/core/CardActionArea'
 
-import MemberDetails from '../MemberDetails'
 import { type Props } from './types'
 import styles from './styles'
 
-const Member = ({
-  member,
-  showMemberDetails,
-  handleShowMemberDetails,
-  handleClose,
-  classes,
-}: Props) => (
-  <Card className={classes.root}>
-    <CardActionArea onClick={handleShowMemberDetails}>
+const MemberDetails = ({ open, onClose, member, classes }: Props) => (
+  <Dialog open={open} onClose={onClose} className={classes.root}>
+    <Card className={classes.card}>
       <CardHeader
         className={classes.cardHeader}
         avatar={
@@ -32,13 +25,8 @@ const Member = ({
       <CardContent>
         <p>{member.age} years old</p>
       </CardContent>
-    </CardActionArea>
-    <MemberDetails
-      member={member}
-      open={showMemberDetails}
-      onClose={handleClose}
-    />
-  </Card>
+    </Card>
+  </Dialog>
 )
 
-export default withStyles(styles)(Member)
+export default withStyles(styles)(MemberDetails)
