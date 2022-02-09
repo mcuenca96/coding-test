@@ -31,7 +31,7 @@ const MemberCard = ({ member, showBio, handleClick, classes }: Props) => (
             src={typeof member.image === 'string' ? member.image : undefined}
           />
         }
-        title={member.name}
+        title={typeof member.name === 'string' ? member.name : 'Pepito Grillo'}
       />
       <CardContent className={classes.cardContent}>
         {typeof member.age === 'number' && (
@@ -40,7 +40,7 @@ const MemberCard = ({ member, showBio, handleClick, classes }: Props) => (
             <p>{member.age} years old</p>
           </div>
         )}
-        {showBio && (
+        {showBio && typeof member.bio === 'string' && (
           <div className={classes.bioDescription}>
             <p>{member.bio}</p>
           </div>
