@@ -1,10 +1,13 @@
 const styles = {
-    root: {},
-    card: {
-      backgroundColor: '#80ced6',
-      padding: '20px',
+  root: {
+    '& .MuiPaper-root': {
+      border: '2px solid black',
+      borderRadius: '25px',
+      maxHeight: '400px',
+      overflow: 'auto'
     }
   }
+}
   
-  export default styles
+export default styles
   

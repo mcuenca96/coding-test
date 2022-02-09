@@ -6,7 +6,7 @@ const NodeCache = require('node-cache')
 const { nextTick } = require('process')
 
 const app = express()
-const cache = new NodeCache({ stdTTL: 15 })
+const cache = new NodeCache({ stdTTL: 3600 })
 const port = process.env.PORT || 5000
 
 app.use(cors())
@@ -41,10 +41,6 @@ app.get('/api/v1/members/page/:page', verifyCache, async (req, res) => {
       payload: await response.json(),
     }))
     cache.set(page, payload)
-    await fetch(payload[0].image).then(async response => {
-      console.log(response)
-    })
-    console.log(payload[0].image)
     return res.status(response.status).json(payload)
   } catch (error) {
     console.log(error)

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core'
 
 import styles from './styles'
