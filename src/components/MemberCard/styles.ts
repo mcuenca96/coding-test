@@ -3,6 +3,10 @@ const styles = {
       backgroundColor: '#80ced6',
       padding: '20px',
     },
+    cardActionArea: {
+      // FIXME: Height: 100% is not working to cover all the card, so I fixed a static height
+      height: '200px'
+    },
     cardContent: {},
     ageContainer: {
       display: 'flex',

@@ -15,7 +15,12 @@ const MemberCard = ({ member, showBio, handleClick, classes }: Props) => (
     <ConditionalCardActionArea
       conditional={!!handleClick}
       wrapper={(children: React.ReactNode) => (
-        <CardActionArea onClick={handleClick}>{children}</CardActionArea>
+        <CardActionArea
+          className={classes.cardActionArea}
+          onClick={handleClick}
+        >
+          {children}
+        </CardActionArea>
       )}
     >
       <CardHeader
@@ -55,4 +60,4 @@ const ConditionalCardActionArea = ({
   conditional: boolean
   wrapper: (children: React.ReactNode) => JSX.Element
   children: React.ReactNode
-}) => (conditional ? wrapper(children) : <>children</>)
+}) => (conditional ? wrapper(children) : <>{children}</>)

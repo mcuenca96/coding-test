@@ -31,8 +31,8 @@ const MembersGrid = ({
             <Member member={member} {...MemberProps} />
           </Grid>
         ))}
+        {loadMore}
       </Grid>
-      {loadMore}
     </div>
   ) : null
 }

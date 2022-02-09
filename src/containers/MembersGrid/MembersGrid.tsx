@@ -1,9 +1,9 @@
 import * as React from 'react'
 import fetch from 'isomorphic-fetch'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import Button from '@material-ui/core/Button'
 
 import MembersGridComponent from '../../components/MembersGrid'
+import LinearProgress from '../../components/LinearProgress'
+import Button from '../../components/Button'
 import Member from '../../containers/Member'
 
 import { type Member as Member$Type } from './types'
@@ -32,7 +32,7 @@ const MembersGrid = () => {
         loadMore={React.useMemo(
           () =>
             loading ? (
-              <CircularProgress />
+              <LinearProgress />
             ) : (
               <Button onClick={() => setCurrentPage(page + 1)}>
                 Load more members
