@@ -24,8 +24,6 @@ const MembersGrid = () => {
     )
   }, [page])
 
-  console.log(members)
-
   return (
     <React.Fragment>
       <MembersGridComponent
