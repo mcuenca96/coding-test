@@ -1,10 +1,14 @@
 import { WithStyles } from '@material-ui/core'
 import { type Member } from '../../containers/MembersGrid'
 
+
 export interface Props extends WithStyles {
   title?: string
   members: Member[]
-  loadMore: React.ReactElement<any> 
-  Member: React.ComponentType<any>
-  MemberProps?: {[key: string] : any}
+  loadMore: JSX.Element
+  Member: React.ComponentType<{
+    member: Member,
+    [key: string]: unknown
+  }>
+  MemberProps?: {[key: string] : unknown}
 }

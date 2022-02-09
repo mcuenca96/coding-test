@@ -53,6 +53,6 @@ const ConditionalCardActionArea = ({
   children,
 }: {
   conditional: boolean
-  wrapper: React.FC<React.ReactNode>
+  wrapper: (children: React.ReactNode) => JSX.Element
   children: React.ReactNode
-}) => (conditional ? wrapper(children) : children)
+}) => (conditional ? wrapper(children) : <>children</>)
