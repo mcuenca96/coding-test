@@ -1,10 +1,7 @@
 body {
   margin: 0;
+  background-color: '#aecad5';
   font-family: sans-serif;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-logo {

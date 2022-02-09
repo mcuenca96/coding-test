@@ -1,19 +1,13 @@
 import React from 'react'
-import fetch from 'isomorphic-fetch'
 
-async function onClick() {
-  const data = await fetch('http://localhost:5000/api/hello')
-  alert((await data.json()).message)
-}
+import MembersGrid from './containers/MembersGrid'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="App-logo">#</div>
-        <p>HELLO</p>
-        <button onClick={onClick}>Click me</button>
-      </header>
+      <Header />
+      <MembersGrid />
     </div>
   )
 }
